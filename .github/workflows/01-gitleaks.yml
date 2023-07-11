@@ -18,6 +18,7 @@ jobs:
     - name: customized gitleaks
       uses: sushi2k/gitleaks-action@extra-args
       with:
+        config-path: .gitleaks.toml
         extra-args: -o gitleaks.sarif -f sarif
     # Testing if the SARIF file was created, by listing the workspace
     - name: List files in the workspace
